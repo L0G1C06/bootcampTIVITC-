@@ -10,10 +10,8 @@ namespace Fundamentos.Models
         public string? Nome { get; set; }
         public int Idade { get; set; }
 
-        public void Apresentar(string nome, int idade)
+        public void Apresentar()
         {
-            Nome = nome;
-            Idade = idade;
             Console.WriteLine($"Olá! Meu nome é {Nome} e tenho {Idade} anos.");
         }
     }
