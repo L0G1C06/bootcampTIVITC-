@@ -44,6 +44,42 @@ namespace Pratica1Estacionamento.Models
             return true;
         }
 
+        public decimal ValorPago(string veiculo, int horas)
+        {
+            // Lógica de valor a ser pago pelo veículo que foi removido
+            
+            // Moto -> 2.50/hora
+            // carro -> 5.00/hora + pequeno (2.00), médio (3.00), grande (4.00)
+            decimal valorTotal = 0;
+            var partes = veiculo.Split('-');
+            string tipo = partes[0];
+
+            if (tipo == "moto")
+            {
+                valorTotal = 2.50m * horas;
+            }
+
+            else if (tipo == "carro")
+            {
+                decimal valorBase = 5.00m * horas;
+                decimal adicionalTamanho = 0;
+                if (partes.Length > 1)
+                {
+                    string tamanho = partes[1];
+                    adicionalTamanho = tamanho switch
+                    {
+                        "pequeno" => 2.00m * horas,
+                        "medio" => 3.00m * horas,
+                        "grande" => 4.00m * horas,
+                        _ => 0
+                    };
+                }
+
+                valorTotal = valorBase + adicionalTamanho;
+            }
+            return valorTotal;
+        }
+
         public bool AdicionarVeiculo(string tipo, string tamanho, string vaga)
         {
             try
@@ -85,6 +121,29 @@ namespace Pratica1Estacionamento.Models
             foreach (var veiculo in Vagas)
             {
                 Console.WriteLine(veiculo);
+            }
+        }
+
+        public void RemoverVeiculos(string vaga, int horas)
+        {
+            // Remover o veículo baseado na vaga
+            if (Vagas == null || Vagas.Count == 0)
+            {
+                Console.WriteLine("Nenhum veículo estacionado.");
+                return;
+            }
+
+            var veiculoParaRemover = Vagas.FirstOrDefault(v => v.EndsWith($"-{vaga}"));
+            if (veiculoParaRemover != null)
+            {
+                Vagas.Remove(veiculoParaRemover);
+                Console.WriteLine($"Veículo na vaga {vaga} removido com sucesso.");
+                decimal valorPago = ValorPago(veiculoParaRemover, horas);
+                Console.WriteLine($"Valor a ser pago pelo veículo na vaga {vaga}: R$ {valorPago}");
+            }
+            else
+            {
+                Console.WriteLine($"Nenhum veículo encontrado na vaga {vaga}.");
             }
         }
     }
