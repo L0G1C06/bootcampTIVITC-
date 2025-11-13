@@ -15,21 +15,24 @@ namespace Pratica1Estacionamento.Models
         {
             var tamanhosValidos = new List<string> {"pequeno", "medio", "grande"};
 
-            if (!tamanhosValidos.Contains(tamanho))
-            {
-                throw new ArgumentException($"Tamanho {tamanho} inválido");
-            }
-
             // verifica se o tipo é moto ou carro, se for moto, desabilita o tamanho, se for carro, obriga passar o tamanho
-            if (tipo == "moto" && tamanho != null)
+            if (tipo == "moto" && !string.IsNullOrEmpty(tamanho))
             {
                 throw new ArgumentException("Moto não deve ter tamanho especificado");
             }
-            else if (tipo == "carro" && tamanho == null)
+            else if (tipo == "carro")
             {
-                throw new ArgumentException("Carro deve ter tamanho especificado");
+                if (string.IsNullOrEmpty(tamanho))
+                {
+                    throw new ArgumentException("Carro deve ter tamanho especificado");
+                }
+                
+                if (!tamanhosValidos.Contains(tamanho))
+                {
+                    throw new ArgumentException($"Tamanho {tamanho} inválido");
+                }
             }
-            // adicionar veículo em Vagas
+            
             if (Vagas == null)
             {
                 Vagas = new List<string>();
