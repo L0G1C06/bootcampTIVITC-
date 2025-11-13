@@ -72,5 +72,20 @@ namespace Pratica1Estacionamento.Models
                 return false;
             }
         }
+
+        public void ListarVeiculos()
+        {
+            if (Vagas == null || Vagas.Count == 0)
+            {
+                Console.WriteLine("Nenhum veículo estacionado.");
+                return;
+            }
+
+            Console.WriteLine("Veículos estacionados:");
+            foreach (var veiculo in Vagas)
+            {
+                Console.WriteLine(veiculo);
+            }
+        }
     }
 }   
