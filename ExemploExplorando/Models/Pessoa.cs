@@ -12,10 +12,7 @@ namespace ExemploExplorando.Models
 
         public string Nome 
         {
-            get
-            {
-                return _nome.ToUpper();
-            } 
+            get => _nome.ToUpper(); // body expression de return simples
             
             set
             {
@@ -30,10 +27,7 @@ namespace ExemploExplorando.Models
         
         public int Idade 
         { 
-            get
-            {
-                return _idade;
-            }
+            get => _idade; // body expression de return simples
             set
             {
                 // Validando se idade inserida é negativa
