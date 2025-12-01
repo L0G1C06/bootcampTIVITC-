@@ -7,8 +7,43 @@ namespace ExemploExplorando.Models
 {
     public class Pessoa
     {
-        public string Nome { get; set; } // tendo get;set é automaticamente idenficiado como Propriedade de uma classe
-        public int Idade { get; set; }
+        private string _nome;
+        private int _idade;
+
+        public string Nome 
+        {
+            get
+            {
+                return _nome.ToUpper();
+            } 
+            
+            set
+            {
+                // Validando se nome inserido é vazio
+                if (value == "")
+                {
+                    throw new ArgumentException("O nome não pode ser vazio");
+                }
+                _nome = value;
+            } 
+        } // tendo get;set é automaticamente idenficado como Propriedade de uma classe
+        
+        public int Idade 
+        { 
+            get
+            {
+                return _idade;
+            }
+            set
+            {
+                // Validando se idade inserida é negativa
+                if (value < 0)
+                {
+                    throw new ArgumentException("A idade não pode ser negativa");
+                }
+                _idade = value;
+            } 
+        }
 
         public void Apresentar()
         {
