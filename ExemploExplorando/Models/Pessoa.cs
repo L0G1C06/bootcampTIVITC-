@@ -7,6 +7,16 @@ namespace ExemploExplorando.Models
 {
     public class Pessoa
     {
+        // Construtores
+        public Pessoa()
+        {
+            // Construtor padrão, caso não passemos nenhum parâmetro
+        }
+        public Pessoa(string nome, int idade)
+        {
+            Nome = nome;
+            Idade = idade;
+        }
         private string _nome;
         private int _idade;
 
