@@ -8,12 +8,15 @@ Pessoa p2 = new Pessoa("Buta", 26);
 // p2.Nome = "Buta";
 // p2.Idade = 26;
 
-Curso ingles = new Curso();
-ingles.Nome = "Inglês Básico";
-ingles.Alunos = new List<Pessoa>();
+Pessoa p3 = new Pessoa("Calero", 40);
 
-ingles.AdicionarAluno(p1);
-ingles.AdicionarAluno(p2);
+Curso ingles = new Curso(new List<Pessoa> { p1, p2 }, "Inglês Básico");
+ingles.AdicionarAluno(p3);
+// ingles.Nome = "Inglês Básico";
+// ingles.Alunos = new List<Pessoa>();
+
+// ingles.AdicionarAluno(p1);
+// ingles.AdicionarAluno(p2);
 
 ingles.ListarAlunos();
 
@@ -21,6 +24,7 @@ ingles.QuantidadeAlunosMatriculados();
 
 ingles.RemoverAluno(p1);
 ingles.RemoverAluno(p2);
+ingles.RemoverAluno(p3);
 
 ingles.ListarAlunos();
 

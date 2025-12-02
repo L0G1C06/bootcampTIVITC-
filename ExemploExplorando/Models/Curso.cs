@@ -7,10 +7,21 @@ namespace ExemploExplorando.Models
 {
     public class Curso
     {
+        public Curso()
+        {
+            
+        }
+
+        public Curso(List<Pessoa> alunos, string nome)
+        {
+            Alunos = alunos;
+            Nome = nome;
+        }
         public string Nome { get; set; }
         public List<Pessoa> Alunos { get; set; }
 
         public void AdicionarAluno(Pessoa aluno)
+        // Função será usada para adicionar alunos na lista de alunos do curso sem usar o construtor
         {
             Alunos.Add(aluno);
         }
