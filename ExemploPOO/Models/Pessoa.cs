@@ -11,7 +11,8 @@ namespace ExemploPOO.Models
         public int Idade { get; set; }
         public string Email { get; set; }
 
-        public void Apresentar()
+        // Polimorfismo - método pode ser sobrescrito em classes derivadas usando 'virtual'
+        public virtual void Apresentar()
         {
             Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
         }
