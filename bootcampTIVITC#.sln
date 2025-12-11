@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratica2Hotel", "Pratica2Ho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploPOO", "ExemploPOO\ExemploPOO.csproj", "{D9F40D52-016B-4BD6-8A08-9BEE243DA647}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratica3PedraPapelTesoura", "Pratica3PedraPapelTesoura\Pratica3PedraPapelTesoura.csproj", "{B5B15F63-FEAF-406F-A862-3F7D641C8C21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{D9F40D52-016B-4BD6-8A08-9BEE243DA647}.Release|x64.Build.0 = Release|Any CPU
 		{D9F40D52-016B-4BD6-8A08-9BEE243DA647}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9F40D52-016B-4BD6-8A08-9BEE243DA647}.Release|x86.Build.0 = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Debug|x86.Build.0 = Debug|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|x64.Build.0 = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5B15F63-FEAF-406F-A862-3F7D641C8C21}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
