@@ -27,3 +27,7 @@ prof1.Idade = 40;
 prof1.Email = "carlos.souza@gmail.com";
 prof1.Disciplina = "Matemática";
 prof1.Apresentar();
+
+Corrente c = new Corrente();
+c.Creditar(500);
+c.ExibirSaldo();
