@@ -1,8 +1,7 @@
 ﻿using ExemploPOO.Models;
 
 // p1 é uma Abstração da classe Pessoa
-Pessoa p1 = new Pessoa();
-p1.Nome = "Eduardo Maldaner";
+Pessoa p1 = new Pessoa(nome: "Eduardo Maldaner");
 p1.Idade = 21;
 
 p1.Apresentar();
@@ -14,15 +13,13 @@ p1.Apresentar();
 // c1.ExibirSaldo();
 
 // Exemplo de Herança - Aluno herda atributos e métodos da classe Pessoa
-Aluno a1 = new Aluno();
-a1.Nome = "Ana Silva";
+Aluno a1 = new Aluno(nome: "Ana Silva");
 a1.Idade = 19;
 a1.Email = "ana.silva@gmail.com";
 a1.Nota = 8.5;
 a1.Apresentar();
 
-Professor prof1 = new Professor();
-prof1.Nome = "Carlos Souza";
+Professor prof1 = new Professor(nome: "Carlos Souza");
 prof1.Idade = 40;
 prof1.Email = "carlos.souza@gmail.com";
 prof1.Disciplina = "Matemática";

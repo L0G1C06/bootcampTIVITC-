@@ -8,6 +8,11 @@ namespace ExemploPOO.Models
     // Aluno herda da classe Pessoa usando ':'
     public class Aluno : Pessoa
     {
+        // Construtor herda da classe base 'Pessoa' usando 'base' o valor do parâmetro 'nome', ou seja, repassa o valor para a classe base Pessoa
+        public Aluno(string nome) : base(nome)
+        {
+            
+        }
         public double Nota { get; set; }
 
         public override void Apresentar()
