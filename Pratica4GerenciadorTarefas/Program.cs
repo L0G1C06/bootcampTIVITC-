@@ -1,10 +1,10 @@
-using ModuloAPI.Context;
+using Pratica4GerenciadorTarefas.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<AgendaContext>(options =>
+builder.Services.AddDbContext<TarefaContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ConexaoPadrao"))
 );
 
