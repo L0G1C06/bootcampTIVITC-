@@ -1,0 +1,6 @@
+@Pratica4GerenciadorTarefas_HostAddress = http://localhost:5128
+
+GET {{Pratica4GerenciadorTarefas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
